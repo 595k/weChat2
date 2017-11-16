@@ -1,0 +1,46 @@
+<import src="../count/count-template.wxml"  />
+<view class="payBook">
+    <view class="bookList">
+        <view class="list">
+            <image src="/images/xiaolong.jpg"></image>
+            <view class="listInfo">
+                <text>书名</text>
+                <text>价格￥:999</text>
+            </view>
+            <template is="shopCount"  />
+        </view>
+    </view>
+    <view class="layingText">
+        <textarea>买家留言</textarea>
+    </view>
+    <view class="adress">
+        <text>地址信息略过</text>
+    </view>
+    <view class="moneyInfo">
+        <view>
+            <text>商品金额</text>
+            <text class="money">￥:222</text>
+        </view>
+        <view>
+            <text>运费</text>
+            <text>￥:0</text>
+        </view>
+    </view>
+    <view class="action">
+        <view class="zf">
+            <text>微信支付</text>
+            <view class="checked">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="pay">
+        <view>
+            <text>合计</text>
+            <text class="money">￥:213</text>
+        </view>
+        <view>
+            <text>去支付</text>
+        </view>
+    </view>
+</view>

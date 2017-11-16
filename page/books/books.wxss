@@ -1,0 +1,55 @@
+@import "search/search.wxss";
+@import "book/book-template.wxss";
+
+.bookContainer {
+    position: relative;
+    margin: 20px auto;
+}
+
+.bookContainer .tuijian {
+    width: 150rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 20rpx;
+    left:50rpx;
+}
+
+.bookContainer .tjImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookContainer .tjImg image {
+    margin: 0 auto;
+    /*width: 100%;*/
+    height: 500rpx;
+}
+
+.bookNav{
+    width:100%;
+    /*height: 100px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom:15rpx; 
+    border-bottom: 1px solid #fff;
+}
+.bookNav .selected{
+    border-bottom: 3px solid red;
+}
+
+.bookNav text{
+	font-size: 16px;
+}
+
+
+.bookList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.app .book{
+	margin-bottom: 5px;
+}

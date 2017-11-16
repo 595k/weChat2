@@ -1,0 +1,7 @@
+<template name="search">
+    <view class="search">
+        <icon type="search" size="14" class='searchImg'></icon>
+        <input placeholder='{{searchTitle}}' bindconfirm="starSearch" placeholder-class='placeholder' bindfocus='onBindFocus'></input>
+        <image wx:if="{{isSearchShow}}" src="/images/icon/xx.png" class="clearSearch" catchtap='clearSearch'></image>
+    </view>
+</template>

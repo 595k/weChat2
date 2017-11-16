@@ -1,0 +1,48 @@
+
+.top .topBg{
+    -webkit-filter: blur(5px);
+    width: 100%;
+    height: 250rpx;
+}
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.userInfo image{
+    width: 100rpx;
+    height: 100rpx;
+    vertical-align: middle
+}
+
+.userInfo .userDetail{
+    font-size: 30px;
+}
+
+.top .userInfo{
+    position: absolute;
+    top: 30px;
+}
+
+.list view {
+    height: 40px;
+    margin: 5px;
+    border-bottom: 1px solid #C7C4C4;
+}
+
+.list image{
+    vertical-align: middle;
+    width:100rpx;
+    height: 80rpx;
+    margin-right: 5px;
+}
+
+.list .more{
+    vertical-align: middle;
+    font-size: 12px;
+    margin-left: 10px;
+}
+

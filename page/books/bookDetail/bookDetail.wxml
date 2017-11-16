@@ -1,0 +1,83 @@
+<import src="../book/book-template.wxml" />
+<import src="../count/count-template.wxml" />
+<view class="shop">
+    <view class="booTtitle">
+        <template is="book"></template>
+        <view class="bookCount">
+            <text>库存：152</text>
+            <text>运费：包邮</text>
+        </view>
+    </view>
+    <view class="laying">
+        <view class="title">
+            <view></view>
+            <text>评论</text>
+            <view></view>
+        </view>
+        <view class="layingInfo">
+            <text>评论（5）</text>
+            <text>123123dd</text>
+            <text>123123</text>
+        </view>
+    </view>
+    <view class='detail'>
+        <view class='title'>
+            <view></view>
+            <text>详情</text>
+            <view></view>
+        </view>
+        <view class='detailInfo'>
+            <text>产品详情</text>
+            <text>标题</text>
+
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+            <text>123123</text>
+            <text>123123</text>
+            <text>fsdfsdfsd</text>
+        </view>
+    </view>
+    <view class='nav'>
+        <view  catchtap='shopCart'>
+            <image src='/images/tab/shop1.png'></image>
+            <text>购物车</text>
+        </view>
+        <view catchtap='gohome'>
+            <image src='/images/tab/shop1.png'></image>
+            <text>店铺</text>
+        </view>
+        <view class='nav11'>
+            <text>加入购物车</text>
+        </view>
+        <view class='nav11' catchtap='isbuy'>
+            <text>立即购买</text>
+        </view>
+    </view>
+</view>
+<view wx:if="{{isbuy}}"  class='buy'>
+    <view class='buy-bottom' >
+        <template is="book"></template>
+        <image catchtap='isbuy' class='png' src='/images/icon/xx.png'></image>
+        <view class='buy-count'>
+            <text>数量</text>
+            <text>库存：123</text>
+            <template is="shopCount"></template>
+        </view>
+        <view class='next' catchtap='payBook'>
+            <text>下一步</text>
+        </view>
+    </view>
+</view>

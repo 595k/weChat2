@@ -1,0 +1,27 @@
+<import src="search/search.wxml" />
+<import src="book/book-template.wxml" />
+<template is="search"></template>
+<view class="app">
+    <view class="bookContainer" catchtap='bookDetail'>
+        <image class="tuijian" src="/images/icon/tuijian.png"></image>
+        <view class="tjImg">
+            <image src="/images/xiaolong.jpg"></image>
+            <text>标题</text>
+        </view>
+    </view>
+    <view class="bookNav">
+        <view class='selected'>
+            <text>推荐</text>
+        </view>
+        <view class='selected'>
+            <text>全部</text>
+        </view>
+    </view>
+    <view class="bookList">
+        <template is="book" />
+        <template is="book" />
+        <template is="book" />
+        <template is="book" />
+
+    </view>
+</view>

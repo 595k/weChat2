@@ -1,0 +1,150 @@
+@import "../book/book-template.wxss";
+@import "../count/count-template.wxss";
+
+.booTtitle .book image {
+    width: 100%;
+    /*height: 150px;*/
+}
+
+.booTtitle .book text {
+    margin: 5px 10px;
+}
+
+.booTtitle .bookCount text {
+    margin: auto 10px;
+}
+
+.shop .title {
+    background-color: #c7c4c4;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop .title view {
+    width: 50px;
+    height: 2px;
+    background-color: #666;
+    margin: auto 10px;
+}
+
+.laying .layingInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
+.detail {
+    margin-bottom: 45px;
+}
+
+.detail .detailInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
+.detail .detailInfo text:nth-child(2) {
+    margin: 5px 0;
+}
+
+.shop .nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 1px;
+}
+
+.shop .nav image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.shop .nav view {
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #c7c4c4;
+}
+
+.nav .nav11 text {
+    margin: auto;
+    line-height: 40px;
+    color: #fff;
+}
+
+.shop .nav view:nth-child(1), .shop .nav view:nth-child(2) {
+    width: 60px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop .nav view:nth-child(3) {
+    background-color: #f5a623;
+}
+
+.shop .nav view:nth-child(4) {
+    background-color: #ff7100;
+}
+
+.buy {
+    position: fixed;
+	top:0px;
+    background: rgba(0, 0, 0,0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.buy .book text:nth-child(2) {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+}
+
+.buy .book text:nth-child(3) {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.buy .book image {
+    width: 70px;
+    height: 70px;
+    margin-left: 50rpx;
+}
+
+.buy .buy-bottom {
+    position: fixed;
+    bottom: 1px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.buy .buy-bottom .png {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.buy .buy-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+
+.buy .next {
+    width: 100%;
+    height: 30px;
+    background-color: #ff7100;
+    color: #fff;
+    text-align: center;
+}

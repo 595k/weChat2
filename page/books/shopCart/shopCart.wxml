@@ -1,0 +1,124 @@
+<import src="../count/count-template.wxml" />
+<view class="cart">
+    <view class="cartTop">
+        <text>购物车</text>
+        <!-- <text catchtap='editOrder'>编辑/完成</text> -->
+    </view>
+    <!-- <view class="edit">
+        <view class="checked">
+            <image class="checkImg" src="/images/icon/checked.png"></image>
+        </view>
+        <text>全选</text>
+        <view class="delete">
+            <text>删除所选</text>
+        </view>
+    </view> -->
+    <view class="shopList">
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+        <view class="list">
+            <view class="checking">
+                <image class="checkImg" src="/images/icon/checked.png"></image>
+            </view>
+            <image src="/images/xiaolong.jpg" catchtap='bookDetail'></image>
+            <view class="shopInfo">
+                <view>简爱</view>
+                <text class='money'>价格:￥0.1</text>
+            </view>
+            <view class="count">
+                <template is="shopCount"></template>
+            </view>
+        </view>
+     
+    </view>
+    <view class="total">
+        <view wx:if="{{selectAll}}" class="checked" catchtap='selectAll'>
+            <image class="checkImg" src="/images/icon/checked.png"></image>
+        </view>
+        <view wx:else class="checking" catchtap='selectAll'>
+            <image class="checkImg" src="/images/icon/checked.png"></image>
+        </view>
+        <text>{{selectAllText}}</text>
+        <text>合计:</text>
+        <text class='money'>￥0.12</text>
+        <view class="end">
+            <text>结算</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,37 @@
+{
+	"pages": [
+		"page/books/books",
+		"page/books/payBook/payBook",
+		"page/books/bookDetail/bookDetail",
+		"page/books/userInfo/userInfo",
+		"page/books/shopCart/shopCart"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "书客",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "page/books/books",
+				"text": "首页",
+				"iconPath": "images/tab/books1.png",
+				"selectedIconPath": "images/tab/books.png"
+			},
+			{
+				"pagePath": "page/books/shopCart/shopCart",
+				"text": "购物车",
+				"iconPath": "images/tab/shop1.png",
+				"selectedIconPath": "images/tab/shop.png"
+			},
+			{
+				"pagePath": "page/books/userInfo/userInfo",
+				"text": "我的",
+				"iconPath": "images/tab/user1.png",
+				"selectedIconPath": "images/tab/user.png"
+			}
+		]
+	}
+}

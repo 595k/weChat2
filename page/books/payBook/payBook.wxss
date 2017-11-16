@@ -1,0 +1,103 @@
+
+@import "../count/count-template.wxss";
+.payBook .bookList .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px auto;
+}
+
+.payBook .bookList image{
+    width:50px;
+    height: 50px;
+}
+.payBook .bookList .listInfo{
+    margin-left: -40px;
+}
+.payBook .bookList .listInfo text:nth-child(2){
+    display: block;
+}
+
+.bookList .shopCount{
+    float: right;
+}
+
+.payBook .layingText textarea{
+    width: 80%;
+    height: 80px;
+    background-color: #E9E7E8;
+    margin:5px auto;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.payBook .layingText {
+    border-top: 1px solid #C7C4C4;
+    border-bottom: 1px solid #C7C4C4;
+}
+
+.payBook .adress{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 5px auto;
+    border-bottom: 1px solid #C7C4C4;
+}
+
+.payBook .moneyInfo view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #C7C4C4;
+    align-items: center;
+}
+
+.payBook .action .checked{
+    width: 50rpx;
+    height: 50rpx;
+    background-color: #FF7100;
+    border-radius: 25rpx;
+    /*margin: auto 20rpx;*/
+}
+
+.payBook .action .checkImg{
+    width: 50rpx;
+    height: 50rpx;
+}
+.payBook .action .zf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:10px auto;
+    width: 90%;
+    height: 50px;
+}
+.payBook .pay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 1px;
+    right: 0px;
+}
+
+.payBook .pay view:nth-child(2){
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FF7100;
+}
+.payBook .pay text{
+    padding-right: 5px;
+}
+.payBook .money{
+    color: red;
+}

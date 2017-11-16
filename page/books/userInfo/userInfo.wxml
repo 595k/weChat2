@@ -1,0 +1,26 @@
+
+<view class="user">
+    <view class="top">
+        <image class="topBg" src="/images/icon/user_bg.jpg"></image>
+        <view class="userInfo">
+            <view>
+                <image src="/images/tab/user1.png"></image>
+                <text >我是用户</text>
+            </view>
+            <view class="userDetail">
+                >
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="order">
+            <image src="/images/icon/order.jpg"></image>
+            <text>我的订单</text>
+        </view>
+        <view>
+            <image src="/images/icon/adress.jpg"></image>
+            <text>收货地址</text>
+        </view>
+        <text class="more">更多功能正在开发中</text>
+    </view>
+</view>

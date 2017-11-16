@@ -1,0 +1,7 @@
+<template name="shopCount">
+    <view class="shopCount">
+        <view>-</view>
+        <view class="checkCount">12113</view>
+        <view>+</view>
+    </view>
+</template>

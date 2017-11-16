@@ -1,0 +1,25 @@
+
+.shopCount{
+    /*width: 100rpx;*/
+    height: 50rpx;
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid red;*/
+}
+
+.shopCount view{
+    /*width: 50rpx;*/
+    padding: 0 10rpx;
+    height: 50rpx;
+    background-color: #C7C4C4;
+    margin: auto 10rpx;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50rpx;
+	font-size: 14px;
+}
+
+.shopCount view:nth-child(1),.shopCount view:nth-child(3){
+    width: 25rpx;
+    border-radius: 13px;
+}
