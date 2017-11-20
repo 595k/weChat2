@@ -1,25 +1,28 @@
-<import src="../count/count-template.wxml"  />
+<import src="../count/count-template.wxml" />
 <view class="payBook">
     <view class="bookList">
         <view class="list">
-            <image src="/images/xiaolong.jpg"></image>
+            <image src="{{logo}}" class='loadImg'></image>
             <view class="listInfo">
-                <text>书名</text>
-                <text>价格￥:999</text>
+                <text>{{title}}</text>
+                <text>价格￥:0.1</text>
             </view>
-            <template is="shopCount"  />
+            <template is="shopCount" data="{{buyCount}}" />
         </view>
     </view>
     <view class="layingText">
-        <textarea>买家留言</textarea>
+        <textarea placeholder='买家留言'></textarea>
     </view>
     <view class="adress">
-        <text>地址信息略过</text>
+        <text wx:if="{{adress==0}}" catchtap='getAdress'>点击获取地址</text>
+        <text wx:if="{{adress==1}}" catchtap='getAdress'>获取地址失败</text>
+        <text wx:else catchtap='getAdress'>{{adress}}</text>
+
     </view>
     <view class="moneyInfo">
         <view>
             <text>商品金额</text>
-            <text class="money">￥:222</text>
+            <text class="money">￥:{{money}}</text>
         </view>
         <view>
             <text>运费</text>
@@ -37,9 +40,9 @@
     <view class="pay">
         <view>
             <text>合计</text>
-            <text class="money">￥:213</text>
+            <text class="money">￥:{{money}}</text>
         </view>
-        <view>
+        <view catchtap='wePay'>
             <text>去支付</text>
         </view>
     </view>

@@ -1,7 +1,7 @@
  <template name="book">
-     <view class="book" catchtap='bookDetail'>
-         <image src="/images/xiaolong.jpg"></image>
-         <text>书名</text>
-         <text>价格￥:999</text>
+     <view class="book" >
+         <image src="{{logo}}" class='loadImg' catchtap='bookDetail' data-id="{{id}}"></image>
+         <text>{{title}}</text>
+         <text>价格￥:0.1</text>
      </view>
  </template>

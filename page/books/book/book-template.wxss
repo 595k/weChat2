@@ -1,12 +1,16 @@
 .book{
     display: flex;
     flex-direction: column;
+
 }
 .book image{
     width: 300rpx;
     height: 300rpx;
 }
 
+/* .book text:nth-child(2){
+  	text-align: center;
+} */
 .book text:nth-child(3){
     color: red;
 }

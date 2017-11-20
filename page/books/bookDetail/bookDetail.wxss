@@ -1,6 +1,6 @@
 @import "../book/book-template.wxss";
 @import "../count/count-template.wxss";
-
+@import "../../../wxParse/wxParse.wxss";
 .booTtitle .book image {
     width: 100%;
     /*height: 150px;*/
@@ -14,13 +14,17 @@
     margin: auto 10px;
 }
 
-.shop .title {
+.shop .laying .title,.shop .detail .title {
     background-color: #c7c4c4;
     height: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.shop .laying .title text,.shop .detail .title text{
+	text-align: center;
+	width: 50px;
 }
 
 .shop .title view {
@@ -34,6 +38,18 @@
     display: flex;
     flex-direction: column;
     margin: 5px 10px;
+}
+.laying .layingInfo view{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 3px;
+	align-items: center
+}
+.laying .layingInfo image{
+	width: 35px;
+	height:30px;
+	border-radius: 12px;
+	margin-right: 3px;
 }
 
 .detail {
@@ -84,6 +100,9 @@
     align-items: center;
     justify-content: center;
 }
+.shop .nav view:nth-child(2) image{
+	background-image:url("http://123")
+}
 
 .shop .nav view:nth-child(3) {
     background-color: #f5a623;
@@ -132,6 +151,7 @@
     position: absolute;
     right: 15px;
     top: 15px;
+	background-image: url('http://')
 }
 
 .buy .buy-count {

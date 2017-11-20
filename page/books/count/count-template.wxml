@@ -1,7 +1,7 @@
 <template name="shopCount">
     <view class="shopCount">
-        <view>-</view>
-        <view class="checkCount">12113</view>
-        <view>+</view>
+        <view data-id="{{index}}" catchtap='minCount'>-</view>
+        <view>{{buyCount}}</view>
+        <view data-id="{{index}}" catchtap='maxCount'>+</view>
     </view>
 </template>

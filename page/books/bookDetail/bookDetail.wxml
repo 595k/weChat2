@@ -1,10 +1,11 @@
 <import src="../book/book-template.wxml" />
 <import src="../count/count-template.wxml" />
+<import src="../../../wxParse/wxParse.wxml" />
 <view class="shop">
     <view class="booTtitle">
-        <template is="book"></template>
+        <template is="book" data="{{...bookDetail}}"></template>
         <view class="bookCount">
-            <text>库存：152</text>
+            <text>库存：10</text>
             <text>运费：包邮</text>
         </view>
     </view>
@@ -15,9 +16,14 @@
             <view></view>
         </view>
         <view class="layingInfo">
-            <text>评论（5）</text>
-            <text>123123dd</text>
-            <text>123123</text>
+            <text>评论（{{sayingCount}}）</text>
+
+            <block wx:key="*.this" wx:for="{{saying}}">
+                <view>
+                    <image src="{{item.logo}}"></image>
+                    <text>{{item.content}}</text>
+                </view>
+            </block>
         </view>
     </view>
     <view class='detail'>
@@ -28,30 +34,14 @@
         </view>
         <view class='detailInfo'>
             <text>产品详情</text>
-            <text>标题</text>
+            <text>{{bookDetail.title}}</text>
+            <!-- <rich-text nodes="{{nodes}}"></rich-text> -->
 
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
-            <text>123123</text>
-            <text>123123</text>
-            <text>fsdfsdfsd</text>
+            <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
         </view>
     </view>
     <view class='nav'>
-        <view  catchtap='shopCart'>
+        <view catchtap='shopCart'>
             <image src='/images/tab/shop1.png'></image>
             <text>购物车</text>
         </view>
@@ -59,7 +49,7 @@
             <image src='/images/tab/shop1.png'></image>
             <text>店铺</text>
         </view>
-        <view class='nav11'>
+        <view class='nav11' catchtap='addShopCart' data-id="{{bookDetail.id}}">
             <text>加入购物车</text>
         </view>
         <view class='nav11' catchtap='isbuy'>
@@ -67,14 +57,14 @@
         </view>
     </view>
 </view>
-<view wx:if="{{isbuy}}"  class='buy'>
-    <view class='buy-bottom' >
-        <template is="book"></template>
+<view wx:if="{{isbuy}}" class='buy'>
+    <view class='buy-bottom'>
+        <template is="book" data="{{...bookDetail}}"></template>
         <image catchtap='isbuy' class='png' src='/images/icon/xx.png'></image>
         <view class='buy-count'>
-            <text>数量</text>
-            <text>库存：123</text>
-            <template is="shopCount"></template>
+            <text>数量  {{buyCount}}</text>
+            <text>库存：10</text>
+            <template is="shopCount" data="{{buyCount}}"></template>
         </view>
         <view class='next' catchtap='payBook'>
             <text>下一步</text>

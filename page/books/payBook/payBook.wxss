@@ -15,6 +15,10 @@
 .payBook .bookList .listInfo{
     margin-left: -40px;
 }
+.payBook .bookList .listInfo text{
+	margin-left: 3px;
+}
+
 .payBook .bookList .listInfo text:nth-child(2){
     display: block;
 }
@@ -67,6 +71,7 @@
 .payBook .action .checkImg{
     width: 50rpx;
     height: 50rpx;
+	background-image: url('http://123')
 }
 .payBook .action .zf{
     display: flex;

@@ -1,6 +1,14 @@
 @import "../count/count-template.wxss";
 
-.cartTop{
+.noLoading {
+    background-image: url('http://123');
+}
+
+.shopList .shopInfo view {
+    font-size: 16px;
+}
+
+.cartTop {
     /*display: flex;
     flex-direction: row;
     justify-content: space-between;*/
@@ -8,15 +16,17 @@
     height: 100rpx;
     text-align: center;
 }
-.cartTop text{
+
+.cartTop text {
     line-height: 100rpx;
 }
-.cartTop text:nth-child(2){
+
+.cartTop text:nth-child(2) {
     right: 30rpx;
-    position:absolute;
+    position: absolute;
 }
 
-.edit{
+.edit {
     display: flex;
     flex-direction: row;
     border-top: 1px solid #fff;
@@ -25,36 +35,39 @@
     align-items: center;
 }
 
-.cart .checking{
+.cart .noSelect {
     width: 50rpx;
     height: 50rpx;
-    background-color: #C7C4C4;
+    background-color: #c7c4c4;
     border-radius: 25rpx;
-    margin: auto 20rpx;
-}
-.cart .checked{
-    width: 50rpx;
-    height: 50rpx;
-    background-color: #FF7100;
-    border-radius: 25rpx;
-    margin: auto 20rpx;
-}
-.cart .checkImg{
-    width: 50rpx;
-    height: 50rpx;
 }
 
-.edit .delete{
+.cart .isSelect {
+    width: 50rpx;
+    height: 50rpx;
+    background-color: #ff7100;
+    border-radius: 25rpx;
+    /* margin: auto 20rpx; */
+}
+
+.cart .select {
+    width: 50rpx;
+    height: 50rpx;
+    margin: auto 20rpx;
+}
+
+.edit .delete {
     width: 200rpx;
     height: 80rpx;
-    background-color: #D20E10;
+    background-color: #d20e10;
     text-align: center;
     line-height: 80rpx;
     border-radius: 20rpx;
-    position:absolute;
+    position: absolute;
     right: 20rpx;
 }
-.edit .delete text{
+
+.edit .delete text {
     color: #fff;
 }
 
@@ -62,7 +75,7 @@
     margin: 0 auto 100rpx;
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -70,29 +83,28 @@
     height: 220rpx;
     margin: 20rpx auto;
     border-bottom: 1px solid #fff;
-
 }
 
-.list image{
+.list image {
     width: 200rpx;
-    height:200rpx;
-
+    height: 200rpx;
 }
-.list .shopInfo{
+
+.list .shopInfo {
     margin-left: 20rpx;
 }
 
-.cart .money{
+.cart .money {
     color: red;
 }
 
-.list .count{
+.list .count {
     position: absolute;
     right: 30rpx;
     bottom: 10rpx;
 }
 
-.total{
+.total {
     width: 100%;
     height: 100rpx;
     display: flex;
@@ -101,21 +113,21 @@
     position: fixed;
     bottom: 0px;
     background-color: #fff;
-    opacity: 0.9
-}
-.total text{
-	margin-right: 8px;
+    opacity: 0.9;
 }
 
-.total .end{
+.total text {
+    margin-right: 8px;
+}
 
+.total .end {
     width: 200rpx;
     height: 80rpx;
-    background-color: #FF7100;
+    background-color: #ff7100;
     text-align: center;
     line-height: 80rpx;
     /*border-radius: 20rpx;*/
-    position:absolute;
+    position: absolute;
     right: 20rpx;
     color: #fff;
 }

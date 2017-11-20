@@ -9,10 +9,10 @@
 
 .shopCount view{
     /*width: 50rpx;*/
-    padding: 0 10rpx;
+    padding: 0 13rpx;
     height: 50rpx;
     background-color: #C7C4C4;
-    margin: auto 10rpx;
+    margin: auto 15rpx;
     text-align: center;
     vertical-align: middle;
     line-height: 50rpx;

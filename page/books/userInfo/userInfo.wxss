@@ -13,9 +13,12 @@
 }
 
 .userInfo image{
-    width: 100rpx;
-    height: 100rpx;
-    vertical-align: middle
+    width: 150rpx;
+    height: 150rpx;
+    vertical-align: middle;
+	border-radius: 12px;
+	margin-right: 5px;
+	background-image: url('http://123')
 }
 
 .userInfo .userDetail{

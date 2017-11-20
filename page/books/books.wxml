@@ -1,27 +1,31 @@
-<import src="search/search.wxml" />
+
 <import src="book/book-template.wxml" />
-<template is="search"></template>
 <view class="app">
-    <view class="bookContainer" catchtap='bookDetail'>
+    <view class="bookContainer">
         <image class="tuijian" src="/images/icon/tuijian.png"></image>
         <view class="tjImg">
-            <image src="/images/xiaolong.jpg"></image>
-            <text>标题</text>
+            <image class='loadImg' src="{{tuijian.logo}}" catchtap='bookDetail' data-id="{{tuijian.id}}"></image>
+            <text>{{tuijian.title}}</text>
+            <text>{{tuijian.introduce}}</text>
         </view>
     </view>
     <view class="bookNav">
-        <view class='selected'>
+        <view wx:if="{{bookTj}}" class='selected' catchtap='bookTj'>
             <text>推荐</text>
         </view>
-        <view class='selected'>
+        <view wx:else catchtap='bookTj'>
+            <text>推荐</text>
+        </view>
+        <view wx:if="{{bookAll}}" class='selected' catchtap='bookAll'>
+            <text>全部</text>
+        </view>
+        <view wx:else  catchtap='bookAll'>
             <text>全部</text>
         </view>
     </view>
     <view class="bookList">
-        <template is="book" />
-        <template is="book" />
-        <template is="book" />
-        <template is="book" />
-
+        <block wx:for="{{bookData}}" wx:key="*.this">
+            <template is="book" data="{{...item}}" />
+        </block>
     </view>
 </view>

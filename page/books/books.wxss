@@ -1,4 +1,4 @@
-@import "search/search.wxss";
+
 @import "book/book-template.wxss";
 
 .bookContainer {
@@ -11,7 +11,7 @@
     height: 60rpx;
     position: absolute;
     top: 20rpx;
-    left:50rpx;
+    left:20rpx;
 }
 
 .bookContainer .tjImg {
@@ -24,6 +24,10 @@
     margin: 0 auto;
     /*width: 100%;*/
     height: 500rpx;
+}
+.bookContainer .tjImg text{
+	width: 100%;
+	text-align: center;
 }
 
 .bookNav{

@@ -1,11 +1,12 @@
-
 <view class="user">
     <view class="top">
         <image class="topBg" src="/images/icon/user_bg.jpg"></image>
         <view class="userInfo">
             <view>
-                <image src="/images/tab/user1.png"></image>
-                <text >我是用户</text>
+                <image wx:if="{{user}}" src="{{userInfo.avatarUrl}}"></image>
+                <image wx:else src="/images/tab/user1.png"></image>
+                <text wx:if="{{user}}">{{userInfo.nickName}}</text>
+                <text wx:else>我是用户</text>
             </view>
             <view class="userDetail">
                 >
@@ -20,6 +21,22 @@
         <view>
             <image src="/images/icon/adress.jpg"></image>
             <text>收货地址</text>
+        </view>
+        <view>
+            <image src="/images/icon/adress.jpg"></image>
+            <text>系统通知</text>
+        </view>
+        <view>
+            <image src="/images/icon/adress.jpg"></image>
+            <text>会员卡</text>
+        </view>
+        <view>
+            <image src="/images/icon/adress.jpg"></image>
+            <text>积金</text>
+        </view>
+        <view>
+            <image src="/images/icon/adress.jpg"></image>
+            <text>储值金</text>
         </view>
         <text class="more">更多功能正在开发中</text>
     </view>

@@ -1,0 +1,12 @@
+image {
+    width: 300px;
+    height: 300px;
+}
+
+view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}

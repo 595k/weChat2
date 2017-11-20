@@ -1,6 +1,7 @@
 {
 	"pages": [
 		"page/books/books",
+		"page/books/wePay/wePay",
 		"page/books/payBook/payBook",
 		"page/books/bookDetail/bookDetail",
 		"page/books/userInfo/userInfo",
