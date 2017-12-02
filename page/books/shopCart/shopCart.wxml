@@ -2,11 +2,12 @@
 <view class="cart">
     <view class="cartTop">
         <text>购物车</text>
+		<text catchtap='delete'>删除选中</text>
     </view>
    
     <view class="shopList">
         <block wx:for="{{cartList}}" wx:key="unique">
-            <view class="list">
+            <view wx:if="{{item.id}}" class="list">
                 <view class="select" catchtap='isSelect' data-id='{{index}}'>
                     <image wx:if="{{item.isSelect}}" class="isSelect noLoading" src="/images/icon/checked.png"></image>
                     <image wx:else class="noSelect noLoading" src="/images/icon/checked.png"></image>

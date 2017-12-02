@@ -12,30 +12,28 @@ Page({
 		total: 0
 	},
 	onShow: function () {
-		//初期化，每次显示页面都同步缓存
-		this.setData({
-			cartList:[],
-			total:0
-		})
+
 		var data = wx.getStorageInfoSync();
 		//获取其中key是数字的缓存
+		var arr = [];
 		for (var ind in data.keys) {
 			if (!isNaN(data.keys[ind])) {
 				var storage = wx.getStorageSync(data.keys[ind]);
+				console.log(typeof (this.data.cartList[ind]))
 				var temp = [];
 				temp = {
 					id: storage.id,
 					title: storage.title.length > 7 ? storage.title.substring(0, 7) + "..." : storage.title,
 					logo: storage.logo,
-					isSelect: false,
-					buyCount: 1
+					isSelect: typeof (this.data.cartList[ind]) == "object" ? this.data.cartList[ind].isSelect : false,
+					buyCount: typeof (this.data.cartList[ind]) == "object" ? this.data.cartList[ind].buyCount : 1
 				};
-				this.data.cartList = this.data.cartList.concat(temp);
+				arr = arr.concat(temp);
 			}
 		}
-		
+
 		this.setData({
-			cartList: this.data.cartList
+			cartList: arr
 		})
 
 	},
@@ -96,7 +94,9 @@ Page({
 		// console.log(key2)
 		if (cart.isSelect) {
 			this.setData({
-				[key2]: false
+				[key2]: false,
+				selectAll: false,
+				selectAllText: "全选"
 			})
 		} else {
 			this.setData({
@@ -154,9 +154,43 @@ Page({
 			total: money
 		})
 	},
+	/**
+	 * 购买/支付
+	 */
 	wePay: function () {
 		wx: wx.navigateTo({
 			url: '../wePay/wePay'
 		})
+	},
+	/**
+	 * 删除商品
+	 */
+	delete: function () {
+		var cartList = this.data.cartList;
+		var del = false;//没有要删除的
+		// var temp = cartList;
+		for (var ind = cartList.length - 1; ind >= 0; ind--) {
+			//判断是否被选中
+			if (cartList[ind].isSelect) {
+				wx.removeStorageSync(cartList[ind].id.toString());
+				cartList.splice(ind, 1);
+				this.data.cartList = cartList;
+				// temp[ind] = false;
+				del = true;
+			}
+		}
+
+		if (!del) {
+			wx.showToast({
+				title: '没有选中',
+			})
+		} else {
+			this.setData({
+				cartList: cartList,
+				total: 0,
+				selectAll: false,
+				selectAllText: "全选"
+			})
+		}
 	}
 })

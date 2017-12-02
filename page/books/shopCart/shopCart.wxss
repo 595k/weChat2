@@ -23,7 +23,13 @@
 
 .cartTop text:nth-child(2) {
     right: 30rpx;
+	top: 5px;
     position: absolute;
+    background-color: #ff7f19;
+    padding: 5px;
+    line-height: 32px;
+	color: #fff;
+	font-weight: bold;
 }
 
 .edit {

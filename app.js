@@ -34,6 +34,6 @@ App({
 
   globalData: {
     userInfo: null,
-	dataUrl:"https://www.61xiaok.xin"
+	dataUrl:"http://www.61xiaok.xin:82"
   }
 })
